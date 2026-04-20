@@ -11,9 +11,16 @@
 body {
   font-family: Arial, sans-serif;
 
-}
 nav {
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;  /* KEEP THIS ✅ */
+  align-items: center;
+  padding: 15px 30px;
+}
+
+nav img {
+  height: 90px;
+  width: auto;
 }
 
 .hero {
@@ -52,9 +59,10 @@ nav {
 <body>
 
 <!-- NAVBAR -->
-<nav>
-  <img src="logo.png">
-  <h3 style="margin-left:10px;">Gtech Ventures</h3>
+<nav style="display:flex; align-items:center; padding:10px 20px; background:white; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+
+  <img src="logo.png" alt="Gtech Ventures" style="height:50px;">
+
 </nav>
 
 <section class="hero">
