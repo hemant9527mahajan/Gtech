@@ -15,16 +15,10 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: 0.3s;
-}
-
-nav.scrolled {
-  background: black;
-  padding: 10px 60px;
 }
 
 .logo {
-  height: 90px;
+  height: 100px;
 }
 
 nav ul {
@@ -37,7 +31,7 @@ nav ul li {
   cursor: pointer;
 }
 
-/* HERO SLIDER */
+/* HERO */
 .hero {
   height: 500px;
   position: relative;
@@ -58,7 +52,6 @@ nav ul li {
   opacity: 1;
 }
 
-/* HERO TEXT */
 .hero-content {
   position: absolute;
   top: 50%;
@@ -104,14 +97,33 @@ nav ul li {
   object-fit: cover;
 }
 
-/* SCROLL ANIMATION */
+.card h3 {
+  padding: 10px;
+}
+
+.card button {
+  margin: 10px;
+  padding: 10px;
+  background: orange;
+  border: none;
+  color: white;
+}
+
+/* ANIMATION */
 .hidden {
   opacity: 0;
   transform: translateY(50px);
-  transition: 0.6s;
 }
 
 .show {
   opacity: 1;
   transform: translateY(0);
+  transition: 0.6s;
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
 }
