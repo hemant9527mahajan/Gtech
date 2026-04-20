@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #111;
+  background: #0a0a0a;
   color: white;
 }
 
@@ -10,32 +10,18 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 60px;
-  background: rgba(0,0,0,0.8);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 15px 80px;
+  background: black;
 }
 
 .logo {
-  height: 100px;
-}
-
-nav ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-}
-
-nav ul li {
-  cursor: pointer;
+  height: 80px;
 }
 
 /* HERO */
 .hero {
   height: 500px;
   position: relative;
-  overflow: hidden;
 }
 
 .slide {
@@ -52,16 +38,19 @@ nav ul li {
   opacity: 1;
 }
 
+/* HERO CENTER FIX */
 .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 55px;
+  margin-bottom: 10px;
 }
 
 .hero button {
@@ -69,17 +58,18 @@ nav ul li {
   background: orange;
   border: none;
   color: white;
-  cursor: pointer;
+  font-size: 16px;
 }
 
-/* PRODUCTS */
+/* PRODUCTS FIX */
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding: 60px;
+  padding: 60px 80px;
 }
 
+/* CARD FIX */
 .card {
   background: #1a1a1a;
   border-radius: 10px;
@@ -88,7 +78,7 @@ nav ul li {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
 }
 
 .card img {
@@ -98,27 +88,16 @@ nav ul li {
 }
 
 .card h3 {
-  padding: 10px;
+  padding: 15px;
+  font-size: 20px;
 }
 
 .card button {
-  margin: 10px;
+  margin: 0 15px 15px;
   padding: 10px;
   background: orange;
   border: none;
   color: white;
-}
-
-/* ANIMATION */
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 0.6s;
 }
 
 /* FOOTER */
@@ -126,4 +105,5 @@ footer {
   background: black;
   text-align: center;
   padding: 20px;
+  margin-top: 40px;
 }
