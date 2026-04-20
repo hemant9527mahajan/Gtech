@@ -22,31 +22,38 @@
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SLIDER -->
 <section class="hero">
-  <h1>Durable. Robust. Unstoppable.</h1>
-  <p>Precision CNC Manufacturing & Industrial Parts</p>
-  <button>Get Quote</button>
+
+  <div class="slide active" style="background-image:url('images/product1.jpg')"></div>
+  <div class="slide" style="background-image:url('images/product2.jpg')"></div>
+  <div class="slide" style="background-image:url('images/product3.jpg')"></div>
+
+  <div class="hero-content">
+    <h1>Durable. Robust. Unstoppable.</h1>
+    <button>Get Quote</button>
+  </div>
+
 </section>
 
 <!-- PRODUCTS -->
 <section class="products">
 
-  <div class="card">
+  <div class="card hidden">
     <img src="images/product1.jpg">
-    <h3>Couplings</h3>
+    <h3>Gear Couplings</h3>
     <button>View</button>
   </div>
 
-  <div class="card">
+  <div class="card hidden">
     <img src="images/product2.jpg">
-    <h3>Metal Parts</h3>
+    <h3>CNC Components</h3>
     <button>View</button>
   </div>
 
-  <div class="card">
+  <div class="card hidden">
     <img src="images/product3.jpg">
-    <h3>CNC Components</h3>
+    <h3>Metal Parts</h3>
     <button>View</button>
   </div>
 
@@ -56,6 +63,40 @@
 <footer>
   <p>© 2026 Gtech Ventures</p>
 </footer>
+
+<!-- JS -->
+<script>
+
+// SLIDER
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000);
+
+
+// NAVBAR SCROLL EFFECT
+window.addEventListener("scroll", () => {
+  document.querySelector("nav").classList.toggle("scrolled", window.scrollY > 50);
+});
+
+
+// SCROLL ANIMATION
+const elements = document.querySelectorAll(".hidden");
+
+window.addEventListener("scroll", () => {
+  elements.forEach(el => {
+    const position = el.getBoundingClientRect().top;
+    if(position < window.innerHeight - 100){
+      el.classList.add("show");
+    }
+  });
+});
+
+</script>
 
 </body>
 </html>
